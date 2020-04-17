@@ -5,9 +5,9 @@ docker build -t raph37/multi-worker:latest -t raph37/multi-worker:$SHA -f ./work
 docker push raph37/multi-client:latest
 docker push raph37/multi-client:$SHA
 docker push raph37/multi-server:latest 
-docker push raph37/multi-server :$SHA
+docker push raph37/multi-server:$SHA
 docker push raph37/multi-worker:latest 
-docker push raph37/multi-worker :$SHA
+docker push raph37/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployment/server-deployment server=raph37/multi-server:$SHA
